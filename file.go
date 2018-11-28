@@ -154,6 +154,7 @@ func (f *File) containsCompressedAtoms(parent Atom) (bool, error) {
 			if child.Type == "cmov" {
 				return true, nil
 			}
+			offset += child.Size
 		} else {
 			return false, err
 		}
